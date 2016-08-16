@@ -6,6 +6,7 @@ $app = Application::getApplication();
 
 $router = $app->getRouter();
 
+// TODO: Add routes here.
 $router->addRoute(new Route('get', 'api/text', 'acme\todo\text\Text', 'show'));
 $router->addRoute(new Route('get', 'api/text/{id}', 'acme\todo\text\Text', 'showItem'));
 

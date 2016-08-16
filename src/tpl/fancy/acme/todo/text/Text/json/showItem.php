@@ -1,0 +1,1 @@
+{"title":"<?= $data->title ?>","content":"<?= $data->content ?>"}
