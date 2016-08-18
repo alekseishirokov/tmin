@@ -18,6 +18,25 @@ class TextModel extends core\Model
 		}));
 	}
 	
+	function insert(TextEntity $item)
+	{
+		return $item;
+	}
+	
+	function update(TextEntity $item)
+	{
+		return $item;
+	}
+	
+	function delete($id)
+	{
+		return true;
+	}
+	
+	function markDone($id)
+	{
+		return true;
+	}
 	
 	private function getData()
 	{
@@ -26,11 +45,13 @@ class TextModel extends core\Model
 		$t = new TextEntity();
 		$t->id = 1;
 		$t->title = 'One';
+		$t->date = '2016-10-23';
 		$t->content = 'First text';
 
 		$t2 = new TextEntity();
 		$t2->id = 2;
 		$t2->title = 'Two';
+		$t2->date = '2016-10-24';
 		$t2->content = 'Second text';
 		
 		$r[] = $t;

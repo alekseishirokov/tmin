@@ -168,7 +168,7 @@ class HtmlRenderer extends Renderer
 		}
 		
 		$route = $app->getRouter()->getRoute(strtoupper($method), $context);
-		print_r($app->getRouter());
+		//print_r($app->getRouter());
 		if (isset ($route))
 		{
 			$controller = $route->controller;

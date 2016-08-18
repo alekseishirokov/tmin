@@ -43,7 +43,14 @@ class JsonRenderer extends Renderer
 	{	
 		$tpl = \tmin\Config::$tpl;
 		$actionTemplate = isset($response->template) ? $response->template : $response->action;
-		$tplfilename = $_SERVER["DOCUMENT_ROOT"] . "/tpl/{$tpl}/{$response->controller}/json/{$actionTemplate}.php";
+		
+		$controllerPath = $response->controller;
+		if (preg_match('/\\\\/', $controllerPath))
+		{
+			$controllerPath = str_replace('\\', DIRECTORY_SEPARATOR, $controllerPath);
+		}
+		
+		$tplfilename = $_SERVER["DOCUMENT_ROOT"] . "/tpl/{$tpl}/{$controllerPath}/json/{$actionTemplate}.php";
 		
 		if (file_exists($tplfilename))
 		{

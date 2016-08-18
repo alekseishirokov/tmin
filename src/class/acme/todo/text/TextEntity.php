@@ -10,6 +10,9 @@ class TextEntity
 	/** @var string */
 	public $title;
 	
+	/** @var date */
+	public $date;	
+	
 	/** @var text */
 	public $content;
 }
