@@ -21,7 +21,7 @@ Copy `src` folder content into your web directory.
 
 ## Using
 
-1. Create folder for your components under the `class` folder. 
+1. Create folder for your component under the `class` folder. 
 Folder structure must correspond with the namespace stucture of your project.
 For example, file `TextController.php` containing `TextController` class:
 	```
@@ -29,13 +29,13 @@ For example, file `TextController.php` containing `TextController` class:
 	namespace acme\todo\text;
 	class TextController {...}
 	```
-must placed into the folder `/class/acme/todo/text/Text`.
+must placed into the folder `/class/acme/todo/text`.
 
 2. Create custom components, and put them into propiate folders. 
-See contents of `/class/acme/todo/text/Text` for example.
+See contents of `/class/acme/todo` for example.
 
 3. (Optional) Create templates for your components. See folder `/tpl/fancy/acme/todo/` for example.
-"fancy" is the name of the template. 
+"fancy" is the name of the template.
 It can be set in `/class/tmin/Config.php` which template to use.
 	```
 	public static $tpl = "fancy";
